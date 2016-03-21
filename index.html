@@ -4,15 +4,372 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sample</title>
-    <!-- BootstrapのCSS読み込み -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!-- jQuery読み込み -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- BootstrapのJS読み込み -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-  </body>
-</html>
+    <title>MT Portfolio</title>
+     <!-- オリジナルの CSS -->
+	   <link rel="stylesheet" href="css/design.css" />
+	<!-- Bootstrap core CSS -->
+     <link href="css/bootstrap.css" rel="stylesheet">
+     <!-- jQuery読み込み -->
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <!-- BootstrapのJS読み込み -->
+     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+     <!-- Google Fontsの読み込み -->
+     <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+     <!-- navの読み込み -->
+     <link rel="stylesheet" href="css/paradeiser.min.css">
+     <!-- アイコンの読み込み -->
+     <link rel="stylesheet" href="fonts/genericons/genericons.css">
+     <!-- navスクロールリンクの読み込み -->
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+     <script type="text/javascript">
+$(function(){
+	$('a[href^=#]').click(function(){
+		var speed = 500;
+		var href= $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		var position = target.offset().top;
+		$("html, body").animate({scrollTop:position}, speed, "swing");
+		return false;
+	});
+});
+</script>
+<!-- 上部へ戻るリンクの読み込み -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    var topBtn = $('#pageTop');
+    topBtn.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+</script>
+
+</head>
+  
+<body>
+<div class="container-fluid">
+<header>
+<nav class="paradeiser">
+        <a href="#top">
+        	<icon class="paradeiser_icon_canvas">
+            <img src="img/bulb.png" alt="Top" class="logo">
+            </icon>
+            <span class="f_col">Top</span>
+        </a>
+        <a href="#appli">
+            <icon class="paradeiser_icon_canvas">
+            	<img src="img/news.png" alt="Web Application" class="icon">
+            </icon>
+            <span class="f_col">Web Application</span>
+        </a>
+        <a href="#design">
+            <icon class="paradeiser_icon_canvas">
+                <img src="img/signature.png" alt="Web Design" class="icon">
+            </icon>
+            <span class="f_col">Web Design</span>
+        </a>
+        <a href="#about">
+            <icon class="paradeiser_icon_canvas">
+                <img src="img/user.png" alt="About" class="icon">
+            </icon>
+            <span class="f_col">About</span>
+        </a>
+        <a href="#contact">
+            <icon class="paradeiser_icon_canvas">
+                <img src="img/thumbs_up.png" alt="Navigate to Contact" class="icon">
+            </icon>
+            <span class="f_col">Contact</span>
+        </a>
+</nav>
+</header>
+
+
+<div class="container-fluid top">
+	<h1><p class="t_1">MT Portfolio</p></h1>
+	<p><span class="genericon genericon-reddit t_2"></span></p>
+	<p class="t_3">I like programming and design</p>
+</div>
+
+<!--アプリ-->
+<div id="appli"></div>
+	
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2><p class="bg-primary">Webアプリケーション　<span class="white">Web Application</span></h2>
+			</div>
+			<div class="panel-body">
+		
+			
+			<div class="row">
+				<div class="icon col-sm-3 hidden-xs"> <!--hidden-xs?-->
+				<span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+				<div class="icon-caption sid-to">message board</div>
+			</div>
+		
+			<div class="content col-sm-9">
+				<h2>メッセージボード</h2>
+					<p>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキストテキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト</p>
+					<a href="#" class="btn btn-primary btn-lg active">アプリを立ち上げる</a>
+					<a href="#" class="btn btn-default btn-lg active">GitHubでコードを見る</a>
+		
+			</div><!--<div class="col-sm-9">-->
+			</div><!--<div class="row">-->
+			
+			<div class="row">
+				<div class="icon col-sm-3 hidden-xs"> <!--hidden-xs?-->
+				<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+				<div class="icon-caption sid-to">twitter clone</div>
+			</div>
+		
+			<div class="content col-sm-9">
+				<h2>Twitterクローン</h2>
+					<p>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキストテキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト</p>
+					<a href="#" class="btn btn-primary btn-lg active">アプリを立ち上げる</a>
+					<a href="#" class="btn btn-default btn-lg active">GitHubでコードを見る</a>
+		
+			</div><!--<div class="col-sm-9">-->
+			</div><!--<div class="row">-->
+			
+			<div class="row">
+				<div class="icon col-sm-3 hidden-xs"> <!--hidden-xs?-->
+				<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+				<div class="icon-caption sid-to">ltem list</div>
+			</div>
+		
+			<div class="content col-sm-9">
+				<h2>モノリスト</h2>
+					<p>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキストテキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト</p>
+					<a href="#" class="btn btn-primary btn-lg active">アプリを立ち上げる</a>
+					<a href="#" class="btn btn-default btn-lg active">GitHubでコードを見る</a>
+		
+			</div><!--<div class="col-sm-9">-->
+			</div><!--<div class="row">-->
+			
+			
+			<div class="row">
+				<div class="icon col-sm-3 hidden-xs"> <!--hidden-xs?-->
+				<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+				<div class="icon-caption sid-to">original service</div>
+			</div>
+		
+			<div class="content col-sm-9">
+				<h2>オリジナルサービス</h2>
+					<p>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキストテキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト</p>
+					<a href="#" class="btn btn-primary btn-lg active">アプリを立ち上げる</a>
+					<a href="#" class="btn btn-default btn-lg active">GitHubでコードを見る</a>
+		
+			</div><!--<div class="col-sm-9">-->
+			</div><!--<div class="row">-->
+			</div>
+		</div>
+<!--アプリ-->	
+	
+
+<!--デザイン-->
+<div id="design"></div>
+ <div class="panel panel-success">
+	<div class="panel-heading">
+		<h2><p class="bg-success">Webデザイン　<span class="white">Web Design</span></h2>
+	</div>
+	<div class="panel-body">
+
+<div class="row">
+	<div class="col-xs-6 col-md-3">
+		<div class="thumbnail">
+			<img src="img/sample-256x256.png">
+			<div class="caption">
+				<h3>サンプルサイト</h3>
+				<span class="bg-success">ディレクション</span>　<span class="bg-info">デザイン</span>　<span class="bg-danger">コーディング</span>
+				<p>...</p>
+				<p><a href="#" class="btn btn-default" role="button" target="_blank">LINK</a></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-md-3">
+		<div class="thumbnail">
+			<img src="img/sample-256x256.png">
+			<div class="caption">
+				<h3>サンプルサイト</h3>
+				<span class="bg-success">ディレクション</span>　<span class="bg-info">デザイン</span>　<span class="bg-danger">コーディング</span>
+				<p>...</p>
+				<p><a href="#" class="btn btn-default" role="button" target="_blank">LINK</a></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-md-3">
+		<div class="thumbnail">
+			<img src="img/sample-256x256.png">
+			<div class="caption">
+				<h3>サンプルサイト</h3>
+				<span class="bg-success">ディレクション</span>　<span class="bg-info">デザイン</span>　<span class="bg-danger">コーディング</span>
+				<p>...</p>
+				<p><a href="#" class="btn btn-default" role="button" target="_blank">LINK</a></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-md-3">
+		<div class="thumbnail">
+			<img src="img/sample-256x256.png">
+			<div class="caption">
+				<h3>サンプルサイト</h3>
+				<span class="bg-success">ディレクション</span>　<span class="bg-info">デザイン</span>　<span class="bg-danger">コーディング</span>
+				<p>...</p>
+				<p><a href="#" class="btn btn-default" role="button" target="_blank">LINK</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+</div>
+<!--デザイン-->
+
+
+<!--自己紹介-->
+<div id="about"></div>
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<h2><p class="bg-info">自己紹介　<span class="white">About</span></h2>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="icon col-sm-3 hidden-xs"> <!--hidden-xs?-->
+				<img src="img/profile.jpg" class="img-responsive" alt="サンプル画像">
+				<div class="icon-caption sid-to">megumi takamoto</div>
+				<div class="twtb"><a href="https://www.facebook.com/megumi.takamoto" target="_blank"><span class="genericon genericon-facebook"></span></a>
+				<a href="https://twitter.com/murasakimegumi" target="_blank"><span class="genericon genericon-twitter"></span></a></div>
+			</div>
+		
+			<div class="content col-sm-9">
+				<h2>高本 恵未　megumi takamoto</h2>
+				<p>はじめまして。Webアプリのプログラムとホームページデザインをやっています。</p>
+				<p>約10年ほど、ホームページに携わる仕事をしてきました。</p>
+				<p>ホームページのデザイン・コーディング・ディレクション・運営・営業サポートなどを一環して携わっております。</p>
+				<p>ユーザビリティーに優れ、企業のイメージアップに貢献するホームページの制作ということで、デザイン・サイト構築をして終わりではなく、運用・保守・サポートといったアフターケアーなどにも重点をおいて企画・制作・管理しております。</p>
+				<p>また、RubeでのWebアプリの制作技術を短期間で学び、今後はWebアプリの開発にも携わっていく予定です。</p>
+				
+				<div class="alert alert-warning" role="alert">使用可能ツール</div>
+				
+				<ul>
+					<li>HTML、CSS</li>
+					<li>Photoshop</li>
+					<li>Illustrator</li>
+					<li>Dreamweaver</li>
+					<li>Wordpress</li>
+					<li>Cloud9</li>
+					<LI>Ruby</LI>
+					<li>Ruby on Rails</li>
+					<li>GitHub </li>
+					<li>Microsoft Office全般</li>
+				</ul>
+				
+			
+				
+				
+					
+			</div><!--<div class="col-sm-9">-->
+		</div><!--<div class="row">-->
+	</div>
+</div>
+
+<!--自己紹介-->
+
+
+<!--お問い合わせ-->
+<div id="contact"></div>
+
+<div class="panel panel-danger">
+	<div class="panel-heading">
+		<h2><p class="bg-danger">お問い合わせ　<span class="white">Contact</span></h2>
+	</div>
+<div class="panel-body">
+<div class="container">
+	<div class="row">
+		<div class="icon col-sm-3 hidden-xs">
+			<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+		    <div class="icon-caption">メール</div>
+		</div>
+		<div class="content col-sm-9">
+			<h2>メールによるお問い合わせ</h2>
+			<P>プライバシーポリシーをご確認、ご同意の上、送信ボタンを押してください。<br>
+			お問い合わせの回答は、受付日から３営業日以内をめどにご返信差し上げます。</P>
+			
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label for="inputCompany"  class="col-md-2 dontrol-label">会社名</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" id="inpyutoCompany" placeholder="サンプル株式会社">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="inputName"  class="col-md-2 dontrol-label">氏名</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" id="inpyutName" placeholder="例）高本恵未">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="inputEmail"  class="col-md-2 dontrol-label">メールアドレス</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" id="inpyutEmail" placeholder="例）mail@gmail.com">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="inputTel"  class="col-md-2 dontrol-label">電話番号</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" id="inpyutTel" placeholder="例）03-3333-3333">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="inputContent"  class="col-md-2 dontrol-label">お問い合わせ内容</label>
+					<div class="col-md-10">
+						<textarea class="form-control" id="inpyutContent" rows="4" placeholder="具体的にお書きください。"></textarea>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-md-offset-2 col-md-10"><!--左にスペース２-->
+						<div class="checkbox">
+							<label>
+							<input type="checkbox">プライバシーポリシーに同意
+							</label>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-md-offset-2 col-md-10">
+						<button type="submit" class="btn btn-degault btn-info btn-block">お問い合わせを送信</button>
+					</div>
+				</div>
+			</form>
+		</div><!--<div class="content col-sm-9">-->
+	</div><!--<div class="row">-->
+</div><!--<div class="container">-->
+</div><!--<div class="panel-body">-->
+
+<!--お問い合わせ-->
+
+</div><!--<div class="container-fluid">-->
+<a id="pageTop" href="#"><span></span></a>
+
+<footer>
+	<div class="copyright">c2016 Megumi Takamoto PortFolio Inc.</div>
+</footer>
+    </div>
+</body>
+</html>    
